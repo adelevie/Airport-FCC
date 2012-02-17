@@ -1,0 +1,179 @@
+!Workspace
+!Version 400
+!Charset WindowsLatin1
+Open Table "Runway1" As Runway1 Interactive
+Open Table "Airport1" As Airport1
+Open Table "D:\MIMAPS\MAPINFO\DATA\BOUNDARY\NATIONAL\STATES\states" As StatesMap Interactive
+Open Table "D:\mimaps\MAPINFO\DATA\BOUNDARY\NATIONAL\STATES\PR_VI\pr_vi" As PR_VI Interactive
+Map From Airport1,Runway1,StatesMap 
+  Position (0.0520833,0.0520833) Units "in"
+  Width 5.45833 Units "in" Height 3.54167 Units "in" Min
+Set Window FrontWindow() ScrollBars Off Autoscroll On
+Set Map
+  CoordSys Earth Projection 9, 62, "m", -96, 23, 29.5, 45.5, 0, 0
+  Center (-40466.10449,1689993.937)
+  Zoom 2972.416419 Units "mi"
+  Preserve Zoom Display Zoom
+  XY Units "m" Distance Units "mi" Area Units "sq mi"
+Set Map
+  Layer 1
+    Display Global
+    Global   Symbol (52,0,12)   
+    Label Line Arrow Position Right Font ("Arial",0,9,0) Pen (1,2,0) 
+      With id_apt_site_num
+      Parallel On Auto Off Overlap Off Duplicates On Offset 2
+      Visibility On
+  Layer 2
+    Display Global
+    Zoom (0, 100) Units "mi" 
+    Label Line Arrow Position Above Font ("Arial",0,9,0) Pen (1,2,0) 
+      With id_apt_site_num
+      Parallel On Auto Off Overlap Off Duplicates Off Offset 2
+      Visibility On
+  Layer 3
+    Display Graphic
+    Global Pen (1,11,0)  Brush (1,16777215,16777215)    
+    Selectable Off
+    Label Line None Position Center Font ("Arial",0,9,0) Pen (1,2,0) 
+      With State
+      Parallel On Auto Off Overlap Off Duplicates On Offset 2
+      Visibility On
+Set Map Layer 0 Editable
+Set Window FrontWindow() Title "conus"
+Map From Airport1,Runway1,StatesMap 
+  Position (0.0520833,0.0520833) Units "in"
+  Width 3.30208 Units "in" Height 2.05208 Units "in" Min
+Set Window FrontWindow() ScrollBars Off Autoscroll On
+Set Map
+  CoordSys Earth Projection 9, 63, "m", -154, 50, 55, 65, 0, 0
+  Center (-225162.8456,1346337.472)
+  Zoom 2141.774942 Units "mi"
+  Preserve Zoom Display Zoom
+  XY Units "m" Distance Units "mi" Area Units "sq mi"
+Set Map
+  Layer 1
+    Display Global
+    Global   Symbol (52,0,12)   
+    Label Line Arrow Position Right Font ("Arial",0,9,0) Pen (1,2,0) 
+      With id_apt_site_num
+      Parallel On Auto Off Overlap Off Duplicates On Offset 2
+      Visibility On
+  Layer 2
+    Display Global
+    Zoom (0, 100) Units "mi" 
+    Label Line Arrow Position Above Font ("Arial",0,9,0) Pen (1,2,0) 
+      With id_apt_site_num
+      Parallel On Auto Off Overlap Off Duplicates Off Offset 2
+      Visibility On
+  Layer 3
+    Display Graphic
+    Label Line None Position Center Font ("Arial",0,9,0) Pen (1,2,0) 
+      With State
+      Parallel On Auto Off Overlap Off Duplicates On Offset 2
+      Visibility On
+Set Window FrontWindow() Title "AK Map"
+Map From Airport1,Runway1,PR_VI 
+  Position (0.260417,0.291667) Units "in"
+  Width 3.30208 Units "in" Height 0.90625 Units "in" Min
+Set Window FrontWindow() ScrollBars Off Autoscroll On
+Set Map
+  CoordSys Earth Projection 1, 62
+  Center (-66.24308204,18.09070339)
+  Zoom 229.7518542 Units "mi"
+  Preserve Zoom Display Zoom
+  XY Units "degree" Distance Units "mi" Area Units "sq mi"
+Set Map
+  Layer 1
+    Display Global
+    Global   Symbol (52,0,12)   
+    Label Line Arrow Position Right Font ("Arial",0,9,0) Pen (1,2,0) 
+      With id_apt_site_num
+      Parallel On Auto Off Overlap Off Duplicates On Offset 2
+      Visibility On
+  Layer 2
+    Display Global
+    Zoom (0, 100) Units "mi" 
+    Label Line Arrow Position Above Font ("Arial",0,9,0) Pen (1,2,0) 
+      With id_apt_site_num
+      Parallel On Auto Off Overlap Off Duplicates Off Offset 2
+      Visibility On
+  Layer 3
+    Display Graphic
+    Label Line None Position Center Font ("Arial",0,9,0) Pen (1,2,0) 
+      With Name
+      Parallel On Auto Off Overlap Off Duplicates On Offset 2
+      Visibility On
+Set Window FrontWindow() Title "PR&VI Map"
+Map From Airport1,Runway1,StatesMap 
+  Position (0.3125,0.541667) Units "in"
+  Width 3.45833 Units "in" Height 2.89583 Units "in" Min
+Set Window FrontWindow() ScrollBars Off Autoscroll On
+Set Map
+  CoordSys Earth Projection 9, 62, "m", -157, 3, 8, 18, 0, 0
+  Center (-52603.07503,1944899.872)
+  Zoom 357.0443172 Units "mi"
+  Preserve Zoom Display Zoom
+  XY Units "m" Distance Units "mi" Area Units "sq mi"
+Set Map Layer 0 Selectable
+Set Map
+  Layer 1
+    Display Global
+    Global   Symbol (52,0,12)   
+    Label Line Arrow Position Right Font ("Arial",0,9,0) Pen (1,2,0) 
+      With id_apt_site_num
+      Parallel On Auto Off Overlap Off Duplicates On Offset 2
+      Visibility On
+  Layer 2
+    Display Global
+    Zoom (0, 100) Units "mi" 
+    Label Line Arrow Position Above Font ("Arial",0,9,0) Pen (1,2,0) 
+      With id_apt_site_num
+      Parallel On Auto Off Overlap Off Duplicates Off Offset 2
+      Visibility On
+  Layer 3
+    Display Graphic
+    Label Line None Position Center Font ("Arial",0,9,0) Pen (1,2,0) 
+      With State
+      Parallel On Auto Off Overlap Off Duplicates On Offset 2
+      Visibility On
+Set Window FrontWindow() Title "HI Map"
+Layout
+  Position (0,0) Units "in"
+  Width 6 Units "in" Height 4.67708 Units "in" 
+  Set CoordSys Layout Units "in"
+  Create Frame (0.3361,0.2868) (10.6979,8.2111)
+    Pen (1,2,0) 
+    Brush (2,16777215,16777215)
+    Title "conus"
+    FillFrame Off
+  Create Frame (0.3931,5.9382) (2.6306,7.7014)
+    Pen (1,2,0) 
+    Brush (2,16777215,16777215)
+    Title "AK Map"
+    FillFrame Off
+  Create Frame (6.1222,6.8708) (8.2479,7.5556)
+    Pen (1,2,0) 
+    Brush (2,16777215,16777215)
+    Title "PR&VI Map"
+    FillFrame Off
+  Create Frame (2.375,6.4667) (4.209,7.5174)
+    Pen (1,2,0) 
+    Brush (2,16777215,16777215)
+    Title "HI Map"
+    FillFrame Off
+  Create Text
+    "United States Airports"
+    (4.0083,0.3896) (6.9917,0.7563)
+    Font ("Arial",0,22,0)
+    Justify Center
+
+  Create Text
+    "Federal Communications Commission\nOffice of Engineering and Technology\nMichael R. Davis"
+    (8.2951,7.6375) (10.6417,8.1375)
+    Font ("Arial",0,10,0)
+    Justify Right
+
+  Set Layout Ruler Off Pagebreaks On Frame Contents Active
+  Zoom 53 Center (5.50682,4.257) Extents To Fit
+  Set Window FrontWindow() Autoscroll On
+  Set CoordSys Earth

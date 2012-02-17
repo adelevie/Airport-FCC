@@ -1,0 +1,67 @@
+'###
+'### This MapBasic script registers and imports the FCC's Airport database from the 
+'### files found on the Internet at http://www.fcc.gov/wtb/databases.html or
+'### ftp://ftp.fcc.gov/pub/XFS_AlphaTest/zipped/airport.zip
+'###
+
+Declare Sub Main()
+Sub Main()
+  Set ProgressBars off
+  
+  Dim AppPath as String
+  AppPath = ApplicationDirectory$()
+
+'
+'AirportsAirportsAirportsAirportsAirportsAirportsAirportsAirportsAirportsAirportsAirports
+'
+  Print "Registering Airports..."
+  Register Table AppPath + "Airport.dat"  TYPE ASCII Delimiter 124 Charset "WindowsLatin1" Into AppPath + "Airport.TAB"
+  Open Table AppPath + "Airport.TAB" Interactive
+
+  Print "Saving Airports..."
+  Commit Table Airport As AppPath + "Airport1.TAB" TYPE NATIVE Charset "WindowsLatin1"
+  Close Table Airport Interactive
+
+  Print "Altering Airports Table..."
+  Open Table AppPath + "Airport1.TAB" as Airport1 Interactive
+  Set Table  Airport1 FastEdit On Undo Off
+  Alter Table "Airport1" ( rename _COL1 id_apt_site_num,_COL2 city,_COL3 county,_COL4 hgt_elev,_COL5 lat_deg,_COL6 lat_min,_COL7 lat_sec,_COL8 latitude_sec,_COL9 lon_deg,_COL10 lon_min,_COL11 lon_sec,_COL12 longitude_sec,_COL13 name_apt_facility,_COL14 state,_COL15 type_apt_facility ) Interactive
+
+  Print "Creating Airports Map..."
+  Create Map For Airport1 CoordSys Earth Projection 1, 0
+  Set Style Symbol MakeSymbol(52,0,12)
+  Update Airport1 Set Obj = CreatePoint(-longitude_sec/3600,latitude_sec/3600)
+
+  Commit Table Airport1 Interactive
+  Print str$(TableInfo(Airport1, 8)) + " Airports Imported."
+  Close Table Airport1 Interactive
+
+'
+'RunwaysRunwaysRunwaysRunwaysRunwaysRunwaysRunwaysRunwaysRunways
+'
+
+  Print "Registering Runways..."
+  Register Table AppPath + "Runway.dat"  TYPE ASCII Delimiter 124 Charset "WindowsLatin1" Into AppPath + "Runway.TAB"
+  Open Table AppPath + "Runway.TAB" Interactive
+
+  Print "Saveing Runways..."
+  Commit Table Runway As AppPath + "Runway1.TAB" TYPE NATIVE Charset "WindowsLatin1"
+  Close Table Runway Interactive
+  Open Table AppPath + "Runway1.TAB" as Runway1 Interactive
+
+  Print "Altering Runways..."
+  Alter Table "Runway1" ( rename _COL1 id_apt_site_num,_COL2 id_rwy,_COL3 hgt_elev_base,_COL4 hgt_elev_recip,_COL5 lat_deg_base,_COL6 lat_deg_recip,_COL7 lat_min_base,_COL8 lat_min_recip,_COL9 lat_sec_base,_COL10 lat_sec_recip,_COL11 latitude_sec_base,_COL12 latitude_sec_recip,_COL13 length_runway,_COL14 lon_deg_base,_COL15 lon_deg_recip,_COL16 lon_min_base,_COL17 lon_min_recip,_COL18 lon_sec_base,_COL19 lon_sec_recip,_COL20 longitude_sec_base,_COL21 longitude_sec_recip,_COL22 type_base_markings,_COL23 type_recip_markings ) Interactive
+
+  Print "Creating Runways Maps..."
+  Create Map For Runway1 CoordSys Earth Projection 1, 0
+  'Note I'm am only creating lines where
+  Select * from Runway1 where longitude_sec_base and longitude_sec_recip and latitude_sec_base and latitude_sec_recip into Runwaypoints
+  Update Runwaypoints Set Obj = CreateLine( -longitude_sec_base/3600,latitude_sec_base/3600,-longitude_sec_recip/3600,latitude_sec_recip/3600)
+  Commit Table Runway1 Interactive
+  Print str$(TableInfo(Runway1, 8)) + " Runways Imported."
+  Close Table Runway1 Interactive
+
+  Run Application AppPath + "Airport1.WOR"
+
+  Print "Finished."
+End Sub
