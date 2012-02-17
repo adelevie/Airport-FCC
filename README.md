@@ -13,7 +13,7 @@ This MapBasic program was written to import the Commission's Airport Database fo
 - Run the MapBasic program
 
 ## Example Maps:
-<img src="https://github.com/adelevie/arptfcc/raw/master/atlanta.jpg" alt="Atlanta" />
+<img src="/raw/master/atlanta.jpg" alt="Atlanta" />
 <img src="https://github.com/adelevie/arptfcc/raw/master/chiohare.jpg" alt="Chicago O'Hare" />
 <img src="https://github.com/adelevie/arptfcc/raw/master/national.jpg" alt="
 Washington National" />
