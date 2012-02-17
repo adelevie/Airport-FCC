@@ -6,7 +6,13 @@ This MapBasic program was written to import the Commission's Airport Database fo
 ## Instructions:
 - You must have MapBasic, MapInfo and an unzip utility to use this program.
 - Download the airport.zip database into a new directory
-- Download the arprtfc.zip import program into that same directory
+- Download the [arprtfc.zip](https://github.com/adelevie/arptfcc/blob/master/arptfcc.zip?raw=true) import program into that same directory
+	- OSX/Unix example: 
+		```
+		wget https://github.com/adelevie/arptfcc/blob/master/arptfcc.zip?raw=true
+		unzip arptfcc
+		```
+		- or just clone this repo and everything is already unzipped for you.
 - Unzip both downloads
 - View/edit the MapBasic 4.1 source to verify that it will do what you expect
 - Compile for your platform (MapInfo 4.1 compile included)
