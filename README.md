@@ -10,6 +10,7 @@ This MapBasic program was written to import the Commission's Airport Database fo
 	- OSX/Unix example: 
 		```
 		wget https://github.com/adelevie/arptfcc/blob/master/arptfcc.zip?raw=true
+		
 		unzip arptfcc
 		```
 		- or just clone this repo and everything is already unzipped for you.
