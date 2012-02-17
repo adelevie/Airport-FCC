@@ -14,4 +14,4 @@ This MapBasic program was written to import the Commission's Airport Database fo
 
 ## Example Maps:
 
-<img src="/atlanta.jpg">
+<img src="https://github.com/adelevie/arptfcc/blob/master/atlanta.jpg">
