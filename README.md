@@ -13,9 +13,9 @@ This MapBasic program was written to import the Commission's Airport Database fo
 - Run the MapBasic program
 
 ## Example Maps:
-<img src="/raw/master/atlanta.jpg" alt="Atlanta" />
-<img src="https://github.com/adelevie/arptfcc/raw/master/chiohare.jpg" alt="Chicago O'Hare" />
-<img src="https://github.com/adelevie/arptfcc/raw/master/national.jpg" alt="
+<img src="http://transition.fcc.gov/oet/info/maps/programs/arptfcc/atlanta.jpg" alt="Atlanta" />
+<img src="http://transition.fcc.gov/oet/info/maps/programs/arptfcc/chiohare.jpg" alt="Chicago O'Hare" />
+<img src="http://transition.fcc.gov/oet/info/maps/programs/arptfcc/national.jpg" alt="
 Washington National" />
-<img src="https://github.com/adelevie/arptfcc/raw/master/nycports.jpg" alt="NYC Ports" />
-<img src="https://github.com/adelevie/arptfcc/raw/master/sanfran.jpg" alt="San Francisco" />
+<img src="http://transition.fcc.gov/oet/info/maps/programs/arptfcc/nycports.jpg" alt="NYC Ports" />
+<img src="http://transition.fcc.gov/oet/info/maps/programs/arptfcc/sanfran.jpg" alt="San Francisco" />
